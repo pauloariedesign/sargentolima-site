@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/apoio", "destination": "/apoio.html" }
+  ],
+  "redirects": [
+    { "source": "/moldura", "destination": "/apoio", "permanent": true }
+  ]
+}
