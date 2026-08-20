@@ -1,0 +1,22 @@
+*.md
+!README.md
+*.zip
+*.bak
+*.psd
+*.ai
+*.eps
+*.docx
+.DS_Store
+zio38l9R
+index.pre-campanha.bak
+identidade-campanha/
+website/
+apresentacao/
+publicar/
+gerador-roteiros/
+_to_delete/
+.claude/
+assets/EMENDAS 2.0.docx
+sargentolima-campanha-final/
+preview-*.html
+preview_*.jpg

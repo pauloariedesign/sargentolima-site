@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sargento Lima — Deputado Estadual por Santa Catarina</title>
+<meta name="description" content="Carlos Henrique de Lima, o Sargento Lima: 22 anos de Polícia Militar, ex-Secretário de Segurança Pública e deputado estadual por Santa Catarina. Mais de R$ 95 milhões em emendas para 159 municípios. Segurança, ordem e resultado.">
+<meta name="keywords" content="Sargento Lima, Carlos Henrique de Lima, deputado Santa Catarina, deputado estadual SC, segurança pública, emendas parlamentares, ALESC, direita Santa Catarina, Joinville">
+<meta name="author" content="Sargento Lima">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#06140e">
+<link rel="canonical" href="https://sargentolima.com.br/">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sargento Lima">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://sargentolima.com.br/">
+<meta property="og:title" content="Sargento Lima — Deputado por Santa Catarina">
+<meta property="og:description" content="A voz forte da direita em SC. 22 anos de Polícia Militar, mais de R$ 95 milhões em emendas para 159 municípios. Ação, ordem e resultado.">
+<meta property="og:image" content="https://sargentolima.com.br/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sargento Lima — Deputado por Santa Catarina">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sargento Lima — Deputado por Santa Catarina">
+<meta name="twitter:description" content="22 anos de PM, ex-Secretário de Segurança, deputado por SC. Mais de R$ 95 milhões em emendas para 159 municípios.">
+<meta name="twitter:image" content="https://sargentolima.com.br/assets/og.jpg">
+<meta name="twitter:site" content="@depsargentolima">
+<!-- Performance -->
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://unpkg.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Carlos Henrique de Lima","alternateName":"Sargento Lima","jobTitle":"Deputado Estadual","birthDate":"1972-08-06","gender":"Male","nationality":"Brasileira","url":"https://sargentolima.com.br/","image":"https://sargentolima.com.br/assets/og.jpg","email":"dep.sargentolima@alesc.sc.gov.br","telephone":"+55-48-3221-2966","worksFor":{"@type":"GovernmentOrganization","name":"Assembleia Legislativa do Estado de Santa Catarina"},"address":{"@type":"PostalAddress","streetAddress":"Rua Dr. Jorge Luz Fontes, 310","addressLocality":"Florianópolis","addressRegion":"SC","postalCode":"88020-900","addressCountry":"BR"},"sameAs":["https://www.instagram.com/depsargentolima/","https://www.facebook.com/depsargentolima/","https://x.com/depsargentolima","https://linktr.ee/Sargentolima"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Sargento Lima — Deputado por Santa Catarina","url":"https://sargentolima.com.br/","inLanguage":"pt-BR","about":"Atuação parlamentar do deputado estadual Sargento Lima em Santa Catarina"}
+</script>
+<style>
+:root{
+  --lime:#F4C22E;          /* AMARELO campanha (accent) */
+  --green:#2E9247;         /* verde vibrante */
+  --green-2:#1F7A38;
+  --green-deep:#0F5A28;
+  --teal:#217A3A;          /* verde (era teal) */
+  --gold:#F4C22E;
+  --gold-2:#D89E1C;
+  --azul:#123C82;          /* azul bandeira / PL */
+  --ink:#0C4A22;           /* fundo verde escuro */
+  --ink-2:#083A1B;
+  --panel:#0C4A26;
+  --paper:#FFFFFF;
+  --dim:#c7e6cf;
+  --line:rgba(255,255,255,.14);
+  --maxw:1220px;
+  --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--lime);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+section{position:relative;padding:clamp(70px,10vw,130px) 0}
+h1,h2,h3,.anton{font-family:var(--sans);font-weight:800;text-transform:uppercase;line-height:.94;letter-spacing:.005em}
+.script{font-family:var(--sans);text-transform:none;color:var(--lime);font-weight:400}
+.eyebrow{font-family:var(--sans);font-weight:700;letter-spacing:.34em;text-transform:uppercase;font-size:.82rem;color:var(--lime);display:inline-flex;align-items:center;gap:13px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--lime);box-shadow:0 0 10px var(--lime)}
+.glow{color:var(--lime);text-shadow:0 0 22px rgba(244,194,46,.55)}
+
+/* SVG rough filter applied to torn shapes */
+.svgdefs{position:absolute;width:0;height:0;overflow:hidden}
+.torn{position:relative;background:#06120b;filter:url(#rough)}
+
+/* progress + flag */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--green),var(--lime));z-index:400;box-shadow:0 0 12px var(--lime)}
+.flagbar{height:4px;background:linear-gradient(90deg,var(--green-deep) 0 50%,var(--lime) 50% 100%)}
+
+/* HEADER */
+header{position:fixed;top:4px;left:0;right:0;z-index:300;transition:.35s;background:rgba(5,20,13,.55);backdrop-filter:blur(16px);border-bottom:1px solid transparent}
+header.scrolled{background:rgba(5,20,13,.92);border-bottom-color:var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.brand-logo img{height:25px;width:auto;display:block;filter:drop-shadow(0 0 10px rgba(244,194,46,.25))}
+.nav-links{display:flex;gap:30px;font-family:var(--sans);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.92rem}
+.nav-links a{color:var(--dim);transition:.2s}
+.nav-links a:hover{color:var(--lime)}
+.nav-social{display:flex;gap:14px;align-items:center}
+.nav-social a{color:var(--dim);transition:.2s;display:flex}
+.nav-social a:hover{color:var(--lime);transform:translateY(-2px)}
+.nav-social svg{width:19px;height:19px}
+@media(max-width:900px){.nav-links{display:none}}
+@media(max-width:540px){.nav-social{display:none}}
+
+/* animated mesh background */
+.mesh{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--ink)}
+.mesh::before,.mesh::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;mix-blend-mode:screen}
+.mesh::before{width:60vw;height:60vw;left:-10vw;top:-15vw;background:radial-gradient(circle,var(--green) 0,transparent 60%);animation:float1 18s ease-in-out infinite}
+.mesh::after{width:55vw;height:55vw;right:-12vw;bottom:-18vw;background:radial-gradient(circle,var(--teal) 0,transparent 60%);animation:float2 22s ease-in-out infinite}
+@keyframes float1{50%{transform:translate(8vw,6vw) scale(1.15)}}
+@keyframes float2{50%{transform:translate(-7vw,-5vw) scale(1.1)}}
+.grain{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:90px;overflow:hidden;
+  background:
+   radial-gradient(900px 720px at 10% 18%,rgba(47,207,99,.17),transparent 60%),
+   radial-gradient(820px 620px at 26% 104%,rgba(15,138,125,.2),transparent 60%),
+   linear-gradient(180deg,#06140e 0%,#081c13 100%)}
+.hero-bg{position:absolute;top:0;right:0;bottom:0;width:50%;z-index:1;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.5) 20%,#000 44%);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.5) 20%,#000 44%)}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:52% 16%}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,var(--ink) 0%,rgba(6,20,14,.35) 26%,transparent 50%),
+  linear-gradient(0deg,var(--ink) 0%,rgba(6,20,14,.4) 12%,transparent 30%),
+  linear-gradient(180deg,var(--ink) 0%,transparent 14%)}
+@media(max-width:940px){.hero{align-items:flex-start;padding-top:112px}
+  .hero-bg{width:100%;z-index:0;-webkit-mask-image:none;mask-image:none}
+  .hero-bg::after{background:linear-gradient(90deg,var(--ink) 14%,rgba(6,20,14,.82) 52%,rgba(6,20,14,.6) 100%),linear-gradient(0deg,var(--ink) 6%,transparent 42%)}
+  .hero-copy{max-width:100%}}
+.hero-grid{position:relative;z-index:3;display:block;width:100%}
+.hero-copy{max-width:600px;opacity:0;transform:translateY(30px);animation:rise .9s .15s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero h1{font-size:clamp(2.8rem,7vw,6rem);margin:14px 0 2px;
+  background:linear-gradient(180deg,#fff 30%,#cfe9d4 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 3px 22px rgba(4,14,9,.85))}
+.hero .sig{font-family:var(--sans);font-weight:600;font-size:clamp(1.25rem,2.8vw,1.85rem);color:var(--lime);line-height:1.05;margin-top:6px;text-shadow:0 0 22px rgba(244,194,46,.4)}
+.hero .role{margin-top:18px;font-family:var(--sans);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:clamp(1rem,2.3vw,1.4rem)}
+.hero .lead{margin-top:18px;max-width:480px;color:var(--dim);font-size:1.08rem}
+.cta-row{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:1rem;padding:15px 30px;border-radius:3px;transition:.22s;cursor:pointer;border:2px solid transparent}
+.btn svg{width:17px;height:17px}
+.btn-primary{background:var(--lime);color:var(--ink);box-shadow:0 8px 30px -8px rgba(244,194,46,.7)}
+.btn-primary:hover{background:#fff;transform:translateY(-3px)}
+.btn-ghost{border-color:rgba(244,194,46,.4);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime);box-shadow:0 0 24px -6px rgba(244,194,46,.5)}
+
+/* hero portrait com borda rasgada */
+.hero-portrait{position:relative;justify-self:center;width:min(100%,440px);aspect-ratio:4/5;opacity:0;transform:translateY(30px) scale(.96);animation:rise .9s .35s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-portrait .glowbg{position:absolute;inset:-14% -8%;z-index:0;background:radial-gradient(circle at 50% 45%,rgba(244,194,46,.45),transparent 62%);filter:blur(20px)}
+.hero-portrait::before{content:"";position:absolute;inset:-11px;z-index:1;background:#06120b;filter:url(#rough);border-radius:10px}
+.hero-portrait::after{content:"";position:absolute;inset:-11px;z-index:3;border:2px solid rgba(244,194,46,.45);border-radius:10px;filter:url(#rough);pointer-events:none}
+.hero-portrait img{position:relative;z-index:2;width:100%;height:100%;object-fit:cover;display:block;border-radius:3px}
+.scrollcue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;font-family:var(--sans);letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:7px}
+.scrollcue .ln{width:1px;height:34px;background:linear-gradient(var(--lime),transparent);animation:cue 1.8s infinite}
+@keyframes cue{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+/* MARQUEE */
+.marquee{background:var(--lime);color:var(--ink);padding:15px 0;overflow:hidden;white-space:nowrap;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.marquee .track{display:inline-block;animation:scroll 26s linear infinite;font-family:var(--sans);font-weight:800;text-transform:uppercase;font-size:1.15rem;letter-spacing:.04em}
+.marquee .track span{margin:0 22px;opacity:.92}
+.marquee .track .dot{color:var(--green-deep)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* STATS */
+.stats{background:var(--ink-2)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+@media(max-width:720px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:30px 22px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .n{font-family:var(--sans);font-weight:800;font-size:clamp(2.4rem,5.4vw,3.6rem);line-height:1;
+  background:linear-gradient(180deg,var(--lime),var(--green-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .l{font-family:var(--sans);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;color:var(--dim);margin-top:9px}
+@media(max-width:720px){.stat:nth-child(2){border-right:0}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}}
+
+/* generic section head */
+.shead{margin-bottom:54px}
+.shead.center{text-align:center}
+.shead.center .eyebrow{justify-content:center;display:inline-flex}
+.shead h2{font-size:clamp(2.4rem,5.6vw,4rem);margin-top:16px;max-width:18ch}
+.shead.center h2{margin-left:auto;margin-right:auto}
+.shead p{color:var(--dim);margin-top:14px;max-width:60ch}
+.shead.center p{margin-left:auto;margin-right:auto}
+
+/* HISTÓRIA */
+.hist-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:clamp(28px,5vw,62px);align-items:center}
+@media(max-width:940px){.hist-grid{grid-template-columns:1fr}}
+.figure{position:relative;aspect-ratio:4/5;width:100%}
+.figure::before{content:"";position:absolute;inset:-10px;z-index:0;background:#06120b;filter:url(#rough);border-radius:10px}
+.figure::after{content:"";position:absolute;inset:-10px;z-index:0;border:2px solid rgba(244,194,46,.4);border-radius:10px;filter:url(#rough);pointer-events:none}
+.figure img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;border-radius:3px}
+.figure .tag{position:absolute;left:-10px;bottom:22px;z-index:3;background:var(--lime);color:var(--ink);font-family:var(--sans);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;padding:8px 16px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+.historia h2{font-size:clamp(2.2rem,5vw,3.5rem)}
+.historia h2 em{font-style:normal;color:var(--lime)}
+.historia p{color:var(--dim);margin:16px 0;font-size:1.06rem}
+.historia p strong{color:var(--paper);font-weight:600}
+.pull{margin-top:24px;padding:20px 26px;border-left:3px solid var(--lime);background:rgba(244,194,46,.07)}
+.pull q{font-style:italic;font-weight:500;font-size:1.3rem;color:var(--paper)}
+
+/* TIMELINE */
+.timeline{position:relative;max-width:780px;margin:0 auto}
+.timeline::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--lime),rgba(244,194,46,.12))}
+.tl{position:relative;padding-left:52px;padding-bottom:40px}
+.tl:last-child{padding-bottom:0}
+.tl .dot{position:absolute;left:1px;top:3px;width:18px;height:18px;border-radius:50%;background:var(--ink);border:3px solid var(--lime);box-shadow:0 0 14px rgba(244,194,46,.6)}
+.tl .yr{font-family:var(--sans);font-weight:700;letter-spacing:.1em;color:var(--lime);font-size:1rem}
+.tl h3{font-size:1.5rem;margin:3px 0 7px}
+.tl p{color:var(--dim)}
+
+/* EMENDAS bars */
+.emendas{background:var(--ink-2)}
+.bars{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.bar .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.bar .top .name{font-family:var(--sans);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:1.05rem}
+.bar .top .val{font-family:var(--sans);font-weight:800;color:var(--lime);font-size:1.25rem}
+.bar .track{height:14px;background:rgba(244,194,46,.1);border-radius:8px;overflow:hidden}
+.bar .fill{height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--green-2),var(--lime));transition:width 1.3s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 16px -2px rgba(244,194,46,.7)}
+.emendas .total{text-align:center;margin-top:40px;font-family:var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.emendas .total b{color:var(--lime)}
+
+/* RESULTADOS / cards numéricos */
+.gridcards{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media(max-width:1040px){.gridcards{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){.gridcards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.gridcards{grid-template-columns:1fr}}
+.gridcards.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:880px){.gridcards.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.gridcards.g4{grid-template-columns:1fr}}
+.ncard{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:26px 20px;text-align:center;transition:.25s}
+.ncard:hover{border-color:var(--lime);transform:translateY(-4px);box-shadow:0 16px 40px -18px rgba(244,194,46,.5)}
+.ncard .n{font-family:var(--sans);font-weight:800;font-size:clamp(2rem,4vw,2.7rem);color:var(--lime);line-height:1}
+.ncard .l{font-family:var(--sans);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;color:var(--dim);margin-top:8px}
+
+/* BANDEIRAS */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:960px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:30px 26px;transition:.25s;position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--green-2),var(--lime));transform:scaleX(0);transform-origin:left;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(244,194,46,.4)}
+.card:hover::after{transform:scaleX(1)}
+.card .ic{width:44px;height:44px;margin-bottom:18px}
+.card .ic svg{width:100%;height:100%;stroke:var(--lime);stroke-width:1.6;fill:none;filter:drop-shadow(0 0 8px rgba(244,194,46,.4))}
+.card h3{font-size:1.4rem;margin-bottom:9px}
+.card p{color:var(--dim);font-size:.96rem}
+
+/* RECONHECIMENTO */
+.reconh{background:linear-gradient(135deg,var(--green-deep),var(--teal));overflow:hidden}
+.reconh::before{content:"";position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.reconh .wrap{position:relative;z-index:2;text-align:center}
+.reconh .eyebrow{justify-content:center;display:inline-flex;color:#eafff0}
+.reconh .eyebrow::before{background:#eafff0;box-shadow:0 0 10px #eafff0}
+.reconh h2{font-size:clamp(2.2rem,5.4vw,3.8rem);margin:16px auto 10px;max-width:18ch}
+.reconh p{color:#dffbe7;max-width:60ch;margin:0 auto;font-size:1.08rem}
+.reconh .date{margin-top:22px;font-family:var(--sans);font-weight:800;font-size:1.5rem;color:#fff}
+
+/* GALERIA */
+.grid-fotos{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:175px;gap:14px}
+@media(max-width:760px){.grid-fotos{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}}
+.gitem{position:relative;border-radius:5px;overflow:hidden;background:#0a1e15}
+.gitem::after{content:"";position:absolute;inset:0;border:1px solid var(--line);border-radius:5px;pointer-events:none}
+.gitem img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s;filter:saturate(1.05)}
+.gitem:hover img{transform:scale(1.07)}
+.g-a{grid-column:span 3;grid-row:span 2}
+.g-b{grid-column:span 3}
+.g-c{grid-column:span 2}
+@media(max-width:760px){.g-a,.g-b,.g-c{grid-column:span 1}.g-a{grid-row:span 2}}
+
+/* CONTATO */
+.contato{text-align:center;overflow:hidden}
+.contato .wrap{position:relative;z-index:3}
+.contato h2{font-size:clamp(2.6rem,7vw,5rem);margin:14px 0 16px}
+.contato p{color:var(--dim);max-width:540px;margin:0 auto 32px;font-size:1.1rem}
+.social-grid{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.sbtn{display:inline-flex;align-items:center;gap:11px;padding:14px 24px;border:2px solid rgba(244,194,46,.28);border-radius:3px;font-family:var(--sans);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.98rem;transition:.22s}
+.sbtn svg{width:19px;height:19px}
+.sbtn:hover{border-color:var(--lime);color:var(--lime);transform:translateY(-3px);box-shadow:0 0 22px -6px rgba(244,194,46,.5)}
+
+/* FOOTER */
+footer{background:#040f09;padding:56px 0 28px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:26px}}
+.foot-grid h4{font-family:var(--sans);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.84rem;color:var(--lime);margin-bottom:14px}
+.foot-grid p,.foot-grid a{color:var(--dim);font-size:.95rem;display:block;margin-bottom:7px;transition:.2s}
+.foot-grid a:hover{color:var(--paper)}
+.foot-logo{height:30px;margin-bottom:14px;filter:drop-shadow(0 0 10px rgba(244,194,46,.25))}
+.foot-social{display:flex;gap:11px;margin-top:8px}
+.foot-social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(244,194,46,.25);display:flex;align-items:center;justify-content:center;color:var(--dim)}
+.foot-social a:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.foot-social svg{width:18px;height:18px}
+.foot-legal{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:.8rem;color:#52685a;text-align:center;line-height:1.7}
+
+/* MAPA */
+.mapa{background:var(--ink);overflow:hidden}
+.mapfull{position:relative;width:100vw;margin-left:calc(50% - 50vw);height:80vh;min-height:560px;margin-top:6px}
+#mapaSC{position:absolute;inset:0;width:100%;height:100%;background:#061a10}
+.leaflet-container{background:#061a10;font-family:var(--sans)}
+.leaflet-interactive:focus{outline:none}
+.toppanel{position:absolute;top:24px;right:24px;width:330px;max-height:calc(100% - 48px);z-index:600;background:rgba(8,26,17,.86);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;box-shadow:0 22px 54px -22px rgba(0,0,0,.75)}
+@media(max-width:900px){
+  .mapfull{height:auto}
+  #mapaSC{position:relative;height:62vh;min-height:400px}
+  .toppanel{position:static;width:auto;max-height:none;margin:16px 22px 0}
+  .toppanel ol{max-height:300px}
+}
+.toppanel h3{font-size:1.35rem;margin-bottom:6px}
+.toppanel .sub{font-size:.82rem;color:var(--dim);margin-bottom:16px}
+.toppanel ol{list-style:none;counter-reset:r;display:flex;flex-direction:column;gap:9px;overflow-y:auto;flex:1;min-height:0;max-height:480px;margin-right:-8px;padding-right:8px}
+.toppanel ol::-webkit-scrollbar{width:8px}
+.toppanel ol::-webkit-scrollbar-thumb{background:rgba(244,194,46,.4);border-radius:4px}
+.toppanel ol::-webkit-scrollbar-thumb:hover{background:rgba(244,194,46,.65)}
+.toppanel ol::-webkit-scrollbar-track{background:rgba(255,255,255,.05);border-radius:4px}
+.toppanel ol{scrollbar-color:rgba(244,194,46,.4) rgba(255,255,255,.05);scrollbar-width:thin}
+.toppanel li{counter-increment:r;display:flex;align-items:center;gap:11px;font-size:.95rem;color:var(--dim)}
+.toppanel li::before{content:counter(r);width:24px;height:24px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--lime);color:var(--ink);border-radius:50%;font-weight:700;font-size:.8rem}
+.toppanel li b{color:var(--paper);font-weight:600}
+.toppanel li .v{margin-left:auto;color:var(--lime);font-weight:700;white-space:nowrap;font-size:.9rem}
+.legend{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);font-size:.78rem;color:var(--dim)}
+.legend .ttl{text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--paper);margin-bottom:8px}
+.legend .row{display:flex;align-items:center;gap:9px;margin-top:6px}
+.legend .sw{width:26px;height:13px;border-radius:3px;flex:none}
+.mtt{background:#06140d!important;border:1px solid var(--lime)!important;color:var(--paper)!important;font-family:var(--sans);font-size:.85rem;border-radius:7px;padding:7px 11px;box-shadow:0 8px 24px rgba(0,0,0,.55)}
+.mtt b{color:var(--lime)}
+.leaflet-tooltip.mtt:before{display:none}
+.leaflet-tooltip.mlbl{background:rgba(6,20,13,.92);border:1px solid rgba(244,194,46,.6);color:#fff;font-family:var(--sans);font-size:.66rem;line-height:1.1;border-radius:6px;padding:3px 7px;box-shadow:0 5px 14px rgba(0,0,0,.5);text-align:center;font-weight:600;white-space:nowrap}
+.leaflet-tooltip.mlbl .lv{display:block;color:var(--lime);font-weight:700;font-size:.68rem}
+.leaflet-tooltip.mlbl{cursor:pointer}
+.leaflet-tooltip.mlbl .det{display:block;margin-top:2px;color:#cfeecd;font-weight:600;font-size:.58rem;letter-spacing:.02em;opacity:.9}
+.mtt .mtt-cta{display:block;margin-top:5px;color:var(--lime);font-weight:700;font-size:.72rem}
+.leaflet-interactive{cursor:pointer}
+.leaflet-tooltip.mlbl:before{display:none}
+.leaflet-control-attribution{background:rgba(5,20,13,.7)!important;color:#6e8576!important}
+.leaflet-control-attribution a{color:#9fc2a8!important}
+.reveal{opacity:0;transform:translateY(34px);transition:.75s cubic-bezier(.2,.7,.2,1)}
+.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+/* COOKIE BANNER */
+.cookiebar{position:fixed;left:16px;right:16px;bottom:16px;z-index:1000;max-width:760px;margin:0 auto;
+  background:rgba(8,26,17,.96);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:14px;
+  padding:18px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;box-shadow:0 20px 50px -16px rgba(0,0,0,.8);
+  transform:translateY(140%);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.cookiebar.show{transform:none}
+.cookiebar p{flex:1;min-width:240px;color:var(--dim);font-size:.92rem;margin:0}
+.cookiebar a{color:var(--lime);text-decoration:underline}
+.cb-actions{display:flex;gap:10px;flex-wrap:wrap}
+.cb-btn{font-family:var(--sans);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.82rem;
+  padding:11px 20px;border-radius:4px;cursor:pointer;border:1.5px solid transparent;transition:.2s}
+.cb-btn.accept{background:var(--lime);color:var(--ink)}
+.cb-btn.accept:hover{background:#fff}
+.cb-btn.ghost{background:transparent;border-color:rgba(244,194,46,.4);color:var(--paper)}
+.cb-btn.ghost:hover{border-color:var(--lime);color:var(--lime)}
+
+/* ===== CAMPANHA 2026 ===== */
+.pl-badge{position:fixed;right:16px;bottom:16px;z-index:250;width:62px;border-radius:12px;box-shadow:0 12px 30px -8px rgba(0,0,0,.6);overflow:hidden;line-height:0;border:2px solid rgba(255,255,255,.9)}
+.pl-badge img{width:100%;height:auto;display:block}
+@media(max-width:600px){.pl-badge{width:50px;right:12px;bottom:12px}}
+.brand-logo img{height:30px}
+.foot-logo{height:34px!important}
+.hero{background:radial-gradient(1200px 820px at 70% 28%,rgba(70,165,90,.4),transparent 60%),linear-gradient(180deg,#2E9247 0%,#1B7A37 46%,#0C4A22 100%)}
+.hero .grain{opacity:.06}
+.hero-flag{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:1}
+.hero::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(9,64,30,.95) 0%,rgba(9,64,30,.72) 28%,rgba(9,64,30,.18) 54%,transparent 70%),linear-gradient(0deg,rgba(9,64,30,.5) 0%,transparent 24%)}
+.hero .hero-grid{z-index:4}
+@media(max-width:940px){.hero::before{background:linear-gradient(180deg,rgba(9,64,30,.82) 0%,rgba(9,64,30,.42) 40%,transparent 64%),linear-gradient(0deg,rgba(9,64,30,.55) 0%,transparent 26%)}}
+.hero-logo{width:min(74%,370px);height:auto;display:block;margin:2px 0 10px;filter:drop-shadow(0 8px 26px rgba(0,0,0,.45))}
+.hero h1.hero-title{background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:#fff;color:#fff;filter:none;font-size:clamp(2rem,5vw,3.6rem);line-height:1;margin:8px 0 2px;text-transform:uppercase;font-weight:800;max-width:16ch}
+.hero-title .w{color:#fff;-webkit-text-fill-color:#fff}
+.hero-title .y{color:var(--gold);-webkit-text-fill-color:var(--gold);text-shadow:0 0 22px rgba(244,194,46,.3)}
+.hero-fig{position:relative;z-index:3;width:min(90%,420px);margin:6px auto 0}
+.hero-fig::before{content:"";position:absolute;inset:-4% -14% 0 -14%;z-index:-1;background:radial-gradient(58% 64% at 52% 44%,rgba(3,18,9,.62),rgba(3,18,9,0) 72%);filter:blur(24px)}
+.hero-fig img{width:100%;height:auto;display:block;filter:drop-shadow(0 28px 44px rgba(0,0,0,.6))}
+@media(min-width:941px){.hero-grid{display:block}.hero-copy{max-width:500px}.hero-fig{position:absolute;right:clamp(-8px,1vw,26px);bottom:0;top:auto;margin:0;width:auto;height:min(90vh,880px);z-index:3}.hero-fig img{width:auto;height:100%}}
+@media(max-width:940px){.hero-fig{display:block;width:min(90%,410px);margin:8px auto 0}}
+/* número em blocos (uso em CTA/seções) */
+.numbox{display:inline-flex;gap:8px;align-items:center}
+.numbox b{width:clamp(44px,6.4vw,60px);height:clamp(54px,7.8vw,74px);display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#F6D23F,#DFA81C);color:var(--green-deep);border-radius:10px;font-weight:800;font-size:clamp(1.9rem,4.2vw,2.8rem);line-height:1;box-shadow:0 10px 22px -10px rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div class="flagbar"></div>
+<a class="pl-badge" href="https://www.pl.org.br/" target="_blank" rel="noopener" aria-label="Partido Liberal"><img src="assets/pl.png" alt="PL — Partido Liberal"></a>
+
+<!-- SVG filter para bordas rasgadas -->
+<svg class="svgdefs"><defs>
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.014" numOctaves="3" seed="7" result="n"/>
+  <feDisplacementMap in="SourceGraphic" in2="n" scale="14" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs></svg>
+
+<header id="hdr">
+  <nav>
+    <a href="#top" class="brand-logo" aria-label="Sargento Lima"><img src="assets/logo-campanha.png" alt="Sargento Lima 2212"></a>
+    <div class="nav-links">
+      <a href="#historia">História</a>
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#mapa">Mapa</a>
+      <a href="/emendas.html">Emendas</a>
+      <a href="/moldura.html">Minha foto</a>
+      <a href="#bandeiras">Bandeiras</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="nav-social">
+      <a href="https://www.instagram.com/depsargentolima/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.facebook.com/depsargentolima/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+      <a href="https://api.whatsapp.com/send?phone=554899410192" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.29-.76.96-.94 1.16-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.57-.49-.5-.67-.5l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34Zm-5.4 7.37h-.01a9.86 9.86 0 0 1-5.02-1.38l-.36-.21-3.73.98 1-3.64-.24-.38a9.86 9.86 0 1 1 8.36 4.63ZM20.5 3.49A11.78 11.78 0 0 0 2.04 17.7L.5 23.5l5.94-1.56a11.76 11.76 0 0 0 5.62 1.43h.01c6.49 0 11.78-5.28 11.78-11.78a11.71 11.71 0 0 0-3.35-8.1Z"/></svg></a>
+      <a href="https://x.com/depsargentolima" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z"/></svg></a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <svg class="hero-flag" viewBox="0 0 120 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><polygon points="74,-34 168,50 74,134 26,50" fill="var(--gold)"/><circle cx="74" cy="50" r="25" fill="var(--azul)"/></svg>
+  <div class="grain"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Candidato a Deputado Federal · Santa Catarina</span>
+      <img class="hero-logo" src="assets/logo-campanha-vert.png" alt="Sargento Lima 2212 — Deputado Federal" fetchpriority="high">
+      <h1 class="hero-title"><span class="w">A</span> <span class="y">voz forte</span> <span class="w">da direita</span><br><span class="w">de</span> <span class="y">Santa Catarina</span></h1>
+      <p class="lead">Do Exército à Polícia Militar. Da linha de frente à Assembleia. Agora, rumo a Brasília — com segurança, ordem e resultado para quem acorda cedo e trabalha.</p>
+      <div class="cta-row">
+        <a href="#resultados" class="btn btn-primary">Veja o trabalho</a>
+        <a href="/moldura.html" class="btn btn-ghost">Use sua moldura</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-fig"><img src="assets/lima-hero.webp" alt="Sargento Lima" width="1455" height="1500"></div>
+  <div class="scrollcue"><span>Role</span><span class="ln"></span></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Segurança</span><span class="dot">•</span><span>Ordem</span><span class="dot">•</span><span>Trabalho</span><span class="dot">•</span><span>Resultado</span><span class="dot">•</span><span>Deputado Federal 2212</span><span class="dot">•</span>
+    <span>Segurança</span><span class="dot">•</span><span>Ordem</span><span class="dot">•</span><span>Trabalho</span><span class="dot">•</span><span>Resultado</span><span class="dot">•</span><span>Deputado Federal 2212</span><span class="dot">•</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats" style="padding:0">
+  <div class="wrap">
+    <div class="stat"><div class="n" data-count="71185" data-suffix="">0</div><div class="l">Votos em 2022</div></div>
+    <div class="stat"><div class="n" data-count="95" data-prefix="R$ " data-suffix=" mi">0</div><div class="l">Em emendas enviadas</div></div>
+    <div class="stat"><div class="n" data-count="159" data-suffix="">0</div><div class="l">Municípios atendidos</div></div>
+    <div class="stat"><div class="n" data-count="22" data-suffix=" anos">0</div><div class="l">De Polícia Militar</div></div>
+  </div>
+</section>
+
+<!-- HISTÓRIA -->
+<section class="historia" id="historia">
+  <div class="wrap hist-grid">
+    <div class="figure reveal">
+      <img src="assets/hero.jpg" alt="Sargento Lima na Assembleia Legislativa de Santa Catarina" loading="lazy" decoding="async">
+      <span class="tag">Na Assembleia · SC</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Quem é Sargento Lima</span>
+      <h2>Da farda ao <em>serviço público</em></h2>
+      <p>Carlos Henrique de Lima, o <strong>Sargento Lima</strong>, nasceu em 1972, construiu sua vida em Santa Catarina e fez da segurança e do trabalho duro a sua identidade.</p>
+      <p>Foram <strong>22 anos de Polícia Militar</strong> — 18 deles na linha de frente — antes de assumir como <strong>Secretário de Estado da Segurança Pública</strong>, onde, em apenas cinco meses, entregou resultados concretos.</p>
+      <p>Eleito deputado estadual em 2018 e <strong>reeleito em 2022 com a 4ª maior votação do estado</strong>, presidiu a CPI dos Respiradores, fiscalizou o dinheiro público e transformou mandato em obra: saúde, educação, infraestrutura e segurança.</p>
+      <div class="pull"><q>Um político tem que ser um CEO do seu estado, tem que defender a todo custo os interesses do cidadão catarinense.</q></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAJETÓRIA -->
+<section class="traj" id="trajetoria">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="eyebrow">Trajetória</span>
+      <h2>Do quartel ao <span class="glow">plenário</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="tl reveal"><span class="dot"></span><div class="yr">1991</div><h3>Exército Brasileiro</h3><p>Início no 62º Batalhão de Infantaria, em Joinville. Uma vida dedicada à disciplina e ao serviço.</p></div>
+      <div class="tl reveal"><span class="dot"></span><div class="yr">1997 – 2019</div><h3>Polícia Militar de SC</h3><p>22 anos de carreira, 18 na atividade operacional. Operações de Choque, Táticas Policiais e Polícia Comunitária. Transferido por mérito à PM Rodoviária.</p></div>
+      <div class="tl reveal"><span class="dot"></span><div class="yr">2018</div><h3>Deputado Estadual</h3><p>Eleito na primeira candidatura com 35.035 votos. Presidiu a CPI dos Respiradores, que investigou compra fraudulenta de R$ 33 milhões.</p></div>
+      <div class="tl reveal"><span class="dot"></span><div class="yr">2022</div><h3>Reeleito com força</h3><p>71.185 votos — a 4ª maior votação entre os eleitos em Santa Catarina. A votação dobrou em quatro anos.</p></div>
+      <div class="tl reveal"><span class="dot"></span><div class="yr">2024</div><h3>Secretário de Segurança</h3><p>À frente da Segurança Pública de SC, comandou apreensões recordes e R$ 140 milhões em investimento anunciado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EMENDAS -->
+<section class="emendas" id="resultados">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="eyebrow">Onde o recurso chegou</span>
+      <h2>Ação concreta, não <span class="glow">discurso</span></h2>
+      <p>Mais de R$ 95 milhões enviados em emendas a 159 municípios catarinenses — com foco em quem produz.</p>
+    </div>
+    <div class="bars reveal">
+      <div class="bar"><div class="top"><span class="name">Educação</span><span class="val">R$ 19,5 mi</span></div><div class="track"><div class="fill" data-w="100"></div></div></div>
+      <div class="bar"><div class="top"><span class="name">Saúde</span><span class="val">R$ 19,0 mi</span></div><div class="track"><div class="fill" data-w="97"></div></div></div>
+      <div class="bar"><div class="top"><span class="name">Infraestrutura</span><span class="val">R$ 18,2 mi</span></div><div class="track"><div class="fill" data-w="93"></div></div></div>
+      <div class="bar"><div class="top"><span class="name">Segurança</span><span class="val">R$ 14,5 mi</span></div><div class="track"><div class="fill" data-w="74"></div></div></div>
+      <div class="bar"><div class="top"><span class="name">Fundo Social</span><span class="val">R$ 8,7 mi</span></div><div class="track"><div class="fill" data-w="44"></div></div></div>
+      <div class="bar"><div class="top"><span class="name">Recursos Extras</span><span class="val">R$ 7,0 mi</span></div><div class="track"><div class="fill" data-w="36"></div></div></div>
+    </div>
+    <div class="total reveal"><b>R$ 95,3 milhões</b> enviados a 159 municípios &nbsp;·&nbsp; <b>+ R$ 1,68 milhão</b> ao Estado</div>
+    <div class="reveal" style="text-align:center;margin-top:26px"><a href="/emendas.html" class="btn btn-primary">Ver todas as emendas por município ▸</a></div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="mapa" id="mapa">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="eyebrow">Emendas pelo mapa de SC</span>
+      <h2>Recurso que <span class="glow">chega na ponta</span></h2>
+      <p>159 municípios catarinenses receberam recursos do mandato. Passe o mouse sobre o mapa para ver o valor de cada cidade — quanto mais forte o verde, maior o repasse. Clique em um município para ver <strong>onde cada recurso foi aplicado</strong> na aba Emendas.</p>
+    </div>
+    <div class="mapfull reveal">
+      <div id="mapaSC"></div>
+      <aside class="toppanel">
+        <h3>Municípios atendidos</h3>
+        <div class="sub">159 cidades · ordem decrescente de valor</div>
+        <ol id="topList"></ol>
+        <div class="legend">
+          <div class="ttl">Intensidade</div>
+          <div class="row"><span class="sw" style="background:#7bff64"></span> Acima de R$ 3 mi</div>
+          <div class="row"><span class="sw" style="background:#2fcf63"></span> R$ 800 mil – 3 mi</div>
+          <div class="row"><span class="sw" style="background:#17853b"></span> R$ 200 – 800 mil</div>
+          <div class="row"><span class="sw" style="background:#12692f"></span> Até R$ 200 mil</div>
+          <div class="row"><span class="sw" style="background:#0e2417"></span> Sem emenda registrada</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS NA SEGURANÇA -->
+<section class="seg">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="eyebrow">Secretário de Segurança · 2024</span>
+      <h2>Cinco meses. <span class="glow">Resultados de verdade.</span></h2>
+      <p>À frente da Segurança Pública de Santa Catarina, transformou comando em entrega.</p>
+    </div>
+    <div class="gridcards reveal">
+      <div class="ncard"><div class="n">821</div><div class="l">Armas apreendidas</div></div>
+      <div class="ncard"><div class="n">8,5 t</div><div class="l">De drogas apreendidas</div></div>
+      <div class="ncard"><div class="n">600</div><div class="l">PMs convocados</div></div>
+      <div class="ncard"><div class="n">72</div><div class="l">Viaturas blindadas</div></div>
+      <div class="ncard"><div class="n">R$ 140 mi</div><div class="l">Em investimento</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUÇÃO LEGISLATIVA -->
+<section class="leg" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="eyebrow">Produção legislativa</span>
+      <h2>Trabalho que vira <span class="glow">lei e fiscalização</span></h2>
+    </div>
+    <div class="gridcards g4 reveal">
+      <div class="ncard"><div class="n">65</div><div class="l">Projetos de Lei</div></div>
+      <div class="ncard"><div class="n">338</div><div class="l">Requerimentos</div></div>
+      <div class="ncard"><div class="n">387</div><div class="l">Indicações</div></div>
+      <div class="ncard"><div class="n">115</div><div class="l">Moções</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BANDEIRAS -->
+<section class="bandeiras" id="bandeiras">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="eyebrow">Minhas bandeiras</span>
+      <h2>Posição clara, sem meio-termo</h2>
+      <p>Os valores que orientam cada voto, cada projeto e cada emenda.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg></div><h3>Segurança</h3><p>Ordem e lei para proteger quem trabalha. Polícia valorizada, bandido na cadeia.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9l6-4 6 4v11M10 20v-5h4v5"/></svg></div><h3>Trabalho</h3><p>Oportunidade no lugar de assistencialismo. Quem produz precisa de respeito.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8c2-2 5-2 7 0s5 2 7 0M5 8v6c2 2 5 2 7 0M19 8v6c-2 2-5 2-7 0"/></svg></div><h3>Valores</h3><p>Defesa da família, da propriedade e das tradições do povo catarinense.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l5-4 5 4M15 21V11l4-2v12M8 12h2M8 16h2"/></svg></div><h3>Resultado</h3><p>Mais de R$ 95 milhões em emendas para 159 municípios de SC, onde a população precisa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="eyebrow">Galeria</span>
+      <h2>No mandato, com o povo</h2>
+    </div>
+    <div class="grid-fotos reveal">
+      <div class="gitem g-a"><img src="assets/g1.jpg" alt="Plenário da Alesc" loading="lazy" decoding="async"></div>
+      <div class="gitem g-b"><img src="assets/g2.jpg" alt="Sargento Lima na tribuna" loading="lazy" decoding="async"></div>
+      <div class="gitem g-c"><img src="assets/g3.jpg" alt="Sargento Lima em sessão" loading="lazy" decoding="async"></div>
+      <div class="gitem g-c"><img src="assets/g4.jpg" alt="Sargento Lima no plenário" loading="lazy" decoding="async"></div>
+      <div class="gitem g-b"><img src="assets/g5.jpg" alt="Sargento Lima na CCJ" loading="lazy" decoding="async"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="mesh"></div><div class="grain"></div>
+  <div class="wrap reveal">
+    <span class="eyebrow" style="display:inline-flex">Santa Catarina mais forte</span>
+    <h2>Ação. Ordem. <span class="glow">Resultado.</span></h2>
+    <p>Acompanhe o trabalho do mandato e fale diretamente com o gabinete pelas redes sociais.</p>
+    <div class="social-grid">
+      <a class="sbtn" href="https://www.instagram.com/depsargentolima/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a>
+      <a class="sbtn" href="https://www.facebook.com/depsargentolima/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>Facebook</a>
+      <a class="sbtn" href="https://api.whatsapp.com/send?phone=554899410192" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.29-.76.96-.94 1.16-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.57-.49-.5-.67-.5l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34Zm-5.4 7.37h-.01a9.86 9.86 0 0 1-5.02-1.38l-.36-.21-3.73.98 1-3.64-.24-.38a9.86 9.86 0 1 1 8.36 4.63ZM20.5 3.49A11.78 11.78 0 0 0 2.04 17.7L.5 23.5l5.94-1.56a11.76 11.76 0 0 0 5.62 1.43h.01c6.49 0 11.78-5.28 11.78-11.78a11.71 11.71 0 0 0-3.35-8.1Z"/></svg>WhatsApp</a>
+      <a class="sbtn" href="https://x.com/depsargentolima" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z"/></svg>X / Twitter</a>
+      <a class="sbtn" href="https://tally.so/r/mYMgEB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>Cadastre-se</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="assets/logo-campanha.png" alt="Sargento Lima 2212">
+        <p>Deputado Estadual por Santa Catarina.<br>Carlos Henrique de Lima.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/depsargentolima/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/depsargentolima/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+          <a href="https://api.whatsapp.com/send?phone=554899410192" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.29-.76.96-.94 1.16-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.57-.49-.5-.67-.5l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.34Zm-5.4 7.37h-.01a9.86 9.86 0 0 1-5.02-1.38l-.36-.21-3.73.98 1-3.64-.24-.38a9.86 9.86 0 1 1 8.36 4.63ZM20.5 3.49A11.78 11.78 0 0 0 2.04 17.7L.5 23.5l5.94-1.56a11.76 11.76 0 0 0 5.62 1.43h.01c6.49 0 11.78-5.28 11.78-11.78a11.71 11.71 0 0 0-3.35-8.1Z"/></svg></a>
+          <a href="https://x.com/depsargentolima" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="#historia">História</a>
+        <a href="#trajetoria">Trajetória</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#bandeiras">Bandeiras</a>
+      </div>
+      <div>
+        <h4>Gabinete</h4>
+        <a href="mailto:dep.sargentolima@alesc.sc.gov.br">dep.sargentolima@alesc.sc.gov.br</a>
+        <p>(48) 3221-2966</p>
+        <p>Rua Dr. Jorge Luz Fontes, 310<br>Centro · Florianópolis/SC</p>
+      </div>
+    </div>
+    <div class="foot-legal">
+      © 2026 Sargento Lima — Carlos Henrique de Lima. Conteúdo institucional sobre a atuação parlamentar.<br>
+      sargentolima.com.br · <a href="/privacidade.html" style="color:var(--lime)">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // progress bar
+  const prog=document.getElementById('prog');
+  addEventListener('scroll',()=>{
+    const h=document.documentElement;
+    prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+    document.getElementById('hdr').classList.toggle('scrolled',scrollY>40);
+  });
+
+  // reveal + counters + bars
+  const counted=new WeakSet();
+  function animateCount(el){
+    const target=+el.dataset.count, pre=el.dataset.prefix||'', suf=el.dataset.suffix||'';
+    const dur=1400, t0=performance.now();
+    function tick(now){
+      const p=Math.min((now-t0)/dur,1), e=1-Math.pow(1-p,3);
+      let v=Math.round(target*e);
+      el.textContent=pre+v.toLocaleString('pt-BR')+suf;
+      if(p<1)requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting)return;
+      e.target.classList.add('on');
+      e.target.querySelectorAll('[data-count]').forEach(n=>{if(!counted.has(n)){counted.add(n);animateCount(n)}});
+      e.target.querySelectorAll('.fill').forEach(f=>{f.style.width=f.dataset.w+'%'});
+      io.unobserve(e.target);
+    });
+  },{threshold:.18});
+  document.querySelectorAll('.reveal,.stats,.emendas').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+  // stats counters (stats has no .reveal so observe directly)
+  io.observe(document.querySelector('.stats'));
+
+  // hero subtle parallax (fade as you scroll)
+  const hp=document.querySelector('.hero-bg');
+  if(hp)addEventListener('scroll',()=>{if(scrollY<900)hp.style.opacity=Math.max(0,1-scrollY/750);},{passive:true});
+</script>
+
+<!-- MAPA DE EMENDAS -->
+<script>
+const EMENDAS=[{n:"Joinville",v:17974420},{n:"Canoinhas",v:4946964},{n:"Porto União",v:3668750},{n:"Florianópolis",v:3329000},{n:"São Francisco do Sul",v:3093999},{n:"Balneário Barra do Sul",v:2618852},{n:"Itaiópolis",v:2320000},{n:"Rio Negrinho",v:1820000},{n:"Garuva",v:1738757},{n:"Massaranduba",v:1570000},{n:"Papanduva",v:1450000},{n:"São Bento do Sul",v:1425000},{n:"Irineópolis",v:1250000},{n:"Barra Velha",v:1247000},{n:"Mafra",v:1200000},{n:"Major Vieira",v:1195000},{n:"Gaspar",v:1100000},{n:"Itapoá",v:975000},{n:"Videira",v:950000},{n:"Jaraguá do Sul",v:943585},{n:"Pomerode",v:875000},{n:"Monte Castelo",v:825000},{n:"Balneário Arroio do Silva",v:800000},{n:"Itajaí",v:800000},{n:"Caçador",v:750000},{n:"Tangará",v:750000},{n:"Lages",v:730000},{n:"Guaramirim",v:700000},{n:"Abelardo Luz",v:650000},{n:"Cunha Porã",v:630000},{n:"Araquari",v:600000},{n:"Penha",v:600000},{n:"Rio do Sul",v:600000},{n:"Palma Sola",v:595000},{n:"São José",v:560540},{n:"Campo Alegre",v:550000},{n:"Rio das Antas",v:550000},{n:"Concórdia",v:530000},{n:"Timbó Grande",v:525046},{n:"Brusque",v:520000},{n:"Ibirama",v:520000},{n:"Antônio Carlos",v:500000},{n:"Caibi",v:500000},{n:"Campos Novos",v:500000},{n:"Imbituba",v:500000},{n:"Schroeder",v:500000},{n:"Arroio Trinta",v:450000},{n:"Doutor Pedrinho",v:450000},{n:"Piratuba",v:450000},{n:"Rio do Oeste",v:450000},{n:"Vargem",v:450000},{n:"Bela Vista do Toldo",v:400000},{n:"Corupá",v:400000},{n:"Ipira",v:400000},{n:"Itá",v:400000},{n:"Matos Costa",v:400000},{n:"Três Barras",v:400000},{n:"Dionísio Cerqueira",v:380000},{n:"Santo Amaro da Imperatriz",v:380000},{n:"Erval Velho",v:350000},{n:"Navegantes",v:350000},{n:"Pinhalzinho",v:350000},{n:"União do Oeste",v:350000},{n:"São Pedro de Alcântara",v:337350},{n:"Capivari de Baixo",v:330000},{n:"Águas de Chapecó",v:300000},{n:"Anita Garibaldi",v:300000},{n:"Blumenau",v:300000},{n:"Bom Jardim da Serra",v:300000},{n:"Herval d’Oeste",v:300000},{n:"Lebon Régis",v:300000},{n:"Lontras",v:300000},{n:"Monte Carlo",v:300000},{n:"Palmeira",v:300000},{n:"Princesa",v:300000},{n:"São Lourenço do Oeste",v:300000},{n:"Taió",v:300000},{n:"Trombudo Central",v:300000},{n:"Braço do Norte",v:280000},{n:"Ipuaçu",v:280000},{n:"Entre Rios",v:270000},{n:"São João do Itaperiú",v:260000},{n:"Arabutã",v:250000},{n:"Campo Erê",v:250000},{n:"Nova Itaberaba",v:250000},{n:"Palhoça",v:250000},{n:"Presidente Castello Branco",v:250000},{n:"São José do Cedro",v:250000},{n:"Xaxim",v:250000},{n:"Barra Bonita",v:220000},{n:"Jardinópolis",v:220000},{n:"Nova Erechim",v:220000},{n:"Itapema",v:210000},{n:"Angelina",v:200000},{n:"Apiúna",v:200000},{n:"Chapecó",v:200000},{n:"Galvão",v:200000},{n:"Içara",v:200000},{n:"Ilhota",v:200000},{n:"Imaruí",v:200000},{n:"Jaguaruna",v:200000},{n:"Lindóia do Sul",v:200000},{n:"Ponte Alta do Norte",v:200000},{n:"Ponte Serrada",v:200000},{n:"Santa Cecília",v:200000},{n:"Tubarão",v:200000},{n:"Tunápolis",v:200000},{n:"Curitibanos",v:180000},{n:"Maravilha",v:170000},{n:"Águas Frias",v:150000},{n:"Alfredo Wagner",v:150000},{n:"Alto Bela Vista",v:150000},{n:"Armazém",v:150000},{n:"Bom Jesus do Oeste",v:150000},{n:"Coronel Freitas",v:150000},{n:"Cunhataí",v:150000},{n:"Governador Celso Ramos",v:150000},{n:"Ibicaré",v:150000},{n:"Ipumirim",v:150000},{n:"Jupiá",v:150000},{n:"Luiz Alves",v:150000},{n:"Novo Horizonte",v:150000},{n:"Rancho Queimado",v:150000},{n:"Riqueza",v:150000},{n:"São Ludgero",v:150000},{n:"Siderópolis",v:150000},{n:"Zortéa",v:150000},{n:"Água Doce",v:140439},{n:"Sul Brasil",v:130000},{n:"Ibiam",v:120000},{n:"Iomerê",v:120000},{n:"Palmitos",v:120000},{n:"Santiago do Sul",v:120000},{n:"Treze Tílias",v:120000},{n:"Serra Alta",v:112500},{n:"Laguna",v:110000},{n:"Abdon Batista",v:100000},{n:"Águas Mornas",v:100000},{n:"Anchieta",v:100000},{n:"Balneário Piçarras",v:100000},{n:"Belmonte",v:100000},{n:"Campo Belo do Sul",v:100000},{n:"Capinzal",v:100000},{n:"Cocal do Sul",v:100000},{n:"Cordilheira Alta",v:100000},{n:"Faxinal dos Guedes",v:100000},{n:"Guabiruba",v:100000},{n:"Guaraciaba",v:100000},{n:"Guarujá do Sul",v:100000},{n:"Macieira",v:100000},{n:"Mirim Doce",v:100000},{n:"Peritiba",v:100000},{n:"São Domingos",v:100000},{n:"São João do Oeste",v:100000},{n:"São Joaquim",v:100000},{n:"Tigrinhos",v:100000},{n:"Tijucas",v:100000},{n:"Timbó",v:100000},{n:"Vargem Bonita",v:100000}];
+(function(){
+  const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/['’`´]/g,'').replace(/\s+/g,' ').trim();
+  const fname=f=>{const p=f&&f.properties||{};return p.name||p.NOME||p.nome||p.Nome||p.MUNICIPIO||p.municipio||p.NM_MUN||p.Município||'';};
+  const lookup=new Map(EMENDAS.map(d=>[norm(d.n),d]));
+  const fmt=v=>'R$ '+Number(v).toLocaleString('pt-BR');
+  const goEmendas=name=>{location.href='/emendas?m='+encodeURIComponent(name);};
+  function color(v){return v>=3e6?'#7bff64':v>=1.5e6?'#52e25a':v>=8e5?'#2fcf63':v>=4e5?'#1fa84c':v>=2e5?'#17853b':'#12692f';}
+  // lista completa (ordem decrescente)
+  const ordenado=[...EMENDAS].sort((a,b)=>b.v-a.v);
+  const ol=document.getElementById('topList');
+  if(ol)ordenado.forEach(d=>{const li=document.createElement('li');li.innerHTML='<b>'+d.n+'</b><span class="v">'+fmt(d.v)+'</span>';ol.appendChild(li);});
+  let started=false;
+  function init(){
+    if(started||typeof L==='undefined')return; started=true;
+    const m=L.map('mapaSC',{scrollWheelZoom:false,zoomControl:true,attributionControl:true,minZoom:6,maxZoom:11}).setView([-27.3,-50.2],7);
+    m.attributionControl.setPrefix('');
+    m.attributionControl.addAttribution('Malha municipal: IBGE / geodata-br');
+    m.on('click',()=>m.scrollWheelZoom.enable());
+    m.on('mouseout',()=>m.scrollWheelZoom.disable());
+    m.createPane('lockedPane');
+    const lp=m.getPane('lockedPane'); lp.style.zIndex=650; lp.style.pointerEvents='auto';
+    let lockTimer;
+    function hideLocked(h){ if(h){clearTimeout(lockTimer); lp.style.display='none';}
+      else{clearTimeout(lockTimer); lockTimer=setTimeout(()=>{lp.style.display='';},90);} }
+    const baseRec=v=>({fillColor:color(v),fillOpacity:.88,color:'#04140b',weight:.6});
+    const hiRec=v=>({fillColor:color(v),fillOpacity:.95,color:'#e3ffe6',weight:1.5});
+    const hoverSt={weight:2.6,color:'#f5de19',fillOpacity:.97};
+    const recip=[]; let lockedTips=[];
+    function placeLabels(){
+      lockedTips.forEach(t=>m.removeLayer(t)); lockedTips=[];
+      recip.forEach(r=>{const s=baseRec(r.v);r.layer.setStyle(s);r.layer._rest=s;});
+      const size=m.getSize(), occ=[];
+      const panel=document.querySelector('.toppanel');
+      if(panel){const pr=panel.getBoundingClientRect(),mr=m.getContainer().getBoundingClientRect();
+        if(pr.width&&pr.left>mr.left)occ.push({x1:pr.left-mr.left-12,y1:pr.top-mr.top-12,x2:pr.right-mr.left+12,y2:pr.bottom-mr.top+12});}
+      for(const r of recip){
+        const p=m.latLngToContainerPoint(r.ll);
+        if(p.x<8||p.y<8||p.x>size.x-8||p.y>size.y-8)continue;
+        const w=Math.max(r.name.length,(fmt(r.v)).length)*6.2+18,h=32;
+        const rc={x1:p.x-w/2,y1:p.y-h/2,x2:p.x+w/2,y2:p.y+h/2};
+        if(occ.some(o=>!(rc.x2<o.x1||rc.x1>o.x2||rc.y2<o.y1||rc.y1>o.y2)))continue;
+        occ.push(rc);
+        const s=hiRec(r.v); r.layer.setStyle(s); r.layer._rest=s;
+        const tt=L.tooltip({permanent:true,direction:'center',className:'mlbl',pane:'lockedPane',interactive:true})
+          .setLatLng(r.ll).setContent('<b>'+r.name+'</b><span class="lv">'+fmt(r.v)+'</span><span class="det">mais detalhes ▸</span>');
+        tt.addTo(m); tt.on('click',()=>goEmendas(r.name)); lockedTips.push(tt);
+      }
+    }
+    let plt; function schedule(){clearTimeout(plt);plt=setTimeout(placeLabels,140);}
+    fetch('https://cdn.jsdelivr.net/gh/tbrugz/geodata-br@master/geojson/geojs-42-mun.json')
+      .then(r=>r.json()).then(gj=>{
+        const gl=L.geoJSON(gj,{
+          style:f=>{const d=lookup.get(norm(fname(f)));
+            return d?baseRec(d.v):{fillColor:'#0e2417',fillOpacity:.5,color:'#0a1d12',weight:.4};},
+          onEachFeature:(f,l)=>{const d=lookup.get(norm(fname(f))); if(!d)return;
+            l._rest=baseRec(d.v);
+            l.bindTooltip('<b>'+fname(f)+'</b><br>'+fmt(d.v)+'<span class="mtt-cta">clique para ver onde aplicou ▸</span>',{className:'mtt',sticky:true});
+            l.on('mouseover',function(){l.setStyle(hoverSt);l.bringToFront();hideLocked(true);});
+            l.on('mouseout',function(){l.setStyle(l._rest);hideLocked(false);});
+            l.on('click',function(){goEmendas(fname(f));});
+            recip.push({name:fname(f),v:d.v,layer:l,ll:l.getBounds().getCenter()});
+          }
+        }).addTo(m);
+        recip.sort((a,b)=>b.v-a.v);
+        try{m.fitBounds(gl.getBounds(),{padding:[16,16]});}catch(e){}
+        setTimeout(()=>{m.invalidateSize();placeLabels();},250);
+        m.on('zoomend',schedule); m.on('moveend',schedule);
+      }).catch(()=>{document.getElementById('mapaSC').innerHTML='<div style="padding:34px;color:#a9c2b1;font-family:var(--sans)">Não foi possível carregar o mapa agora. Recarregue a página.</div>';});
+  }
+  const t=document.getElementById('mapaSC');
+  if(t){const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){init();obs.disconnect();}})},{threshold:.04});obs.observe(t);}
+})();
+</script>
+
+<!-- BANNER DE COOKIES (LGPD) -->
+<div id="cookieBar" class="cookiebar" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos cookies para medir o desempenho do site e melhorar sua experiência. Ao aceitar, você concorda com nossa <a href="/privacidade.html">Política de Privacidade</a>.</p>
+  <div class="cb-actions">
+    <button id="cbReject" class="cb-btn ghost">Recusar</button>
+    <button id="cbAccept" class="cb-btn accept">Aceitar</button>
+  </div>
+</div>
+
+<!-- META PIXEL (carrega só após consentimento) -->
+<script>
+(function(){
+  /* >>> Cole aqui o ID do Meta Pixel (ex.: '123456789012345') <<< */
+  var PIXEL_ID = '1828233265227540';
+
+  function loadMetaPixel(){
+    if(!PIXEL_ID || window.__fbqLoaded) return; window.__fbqLoaded = true;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL_ID); fbq('track', 'PageView');
+  }
+
+  var KEY='sl_cookie_consent';
+  var bar=document.getElementById('cookieBar');
+  var consent=null; try{consent=localStorage.getItem(KEY);}catch(e){}
+
+  if(consent==='granted'){ loadMetaPixel(); }
+  else if(consent!=='denied'){ setTimeout(function(){bar.classList.add('show');},900); }
+
+  function decide(v){ try{localStorage.setItem(KEY,v);}catch(e){} bar.classList.remove('show');
+    if(v==='granted') loadMetaPixel(); }
+  document.getElementById('cbAccept').addEventListener('click',function(){decide('granted');});
+  document.getElementById('cbReject').addEventListener('click',function(){decide('denied');});
+})();
+</script>
+</body>
+</html>
